@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>This is me.</h1>
+<br>
+<p>Originally from Little Rock, AR (Woo Pig), I currently am a student
+  at Southern Methodist University in Dallas, Texas.  Rather than
+  list all the things I do there, I'll just let you read
+  <a target="_blank" href="{{ url_for('static', filename = 'CameronMatsonResume.pdf') }}">this.</a>
+{% endblock %}

@@ -1,0 +1,45 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }} - microblog</title>
+    {% else %}
+    <title>Welcome to microblog</title>
+    {% endif %}
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'blog.css') }}">
+</head>
+  </head>
+  <body>
+    <table id="wrapper">
+      <tr valign="top" height = 600px>
+        <td>
+          <table id="nav">
+            <tr>
+              <td><a href="/index/">Home</a></td>
+            </tr>
+            <tr>
+              <td><a href="/bio/">Bio</a></td>
+            </tr>
+            <tr>
+              <td><a href="/thoughts/">Thoughts</a></td>
+            </tr>
+          </table>
+        </td>
+        <td id="spacer"></td>
+        <td id=content width = 550px>
+          <table>
+            <tr>
+              <td>{% block content %}{% endblock %}</td>
+            </tr>
+            <tr id="footer">
+              <td>
+                <br>
+                <p>here's some links</p>
+                <br>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

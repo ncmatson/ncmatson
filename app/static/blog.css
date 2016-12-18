@@ -1,0 +1,12 @@
+#spacer{
+  position: relative;
+  width: 50px;
+}
+
+#footer{
+  text-align: center;
+}
+
+a:active{
+  color: red;
+}
