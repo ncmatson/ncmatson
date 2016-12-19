@@ -5,10 +5,9 @@ import os
 @app.route('/')
 @app.route('/index/')
 def index():
-    user = {'nickname': 'Cameron','age':21}  # fake user
     return render_template('index.html',
-                            title = 'home',
-                            user = user)
+                            title = 'Home',
+                            )
 
 
 @app.route('/bio/')
@@ -27,4 +26,7 @@ def thoughts():
 
 @app.route('/thoughts/<log>')
 def logs(log):
-    return render_template('logs/'+log)
+    log_title = log.replace('.html','')
+    return render_template('logs/'+log,
+                            title = log_title
+                            )

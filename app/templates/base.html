@@ -1,16 +1,17 @@
 <html>
   <head>
     {% if title %}
-    <title>{{ title }} - microblog</title>
+    <title> {{ title }} </title>
     {% else %}
-    <title>Welcome to microblog</title>
+    <title>ncmatson</title>
     {% endif %}
+    <link href="{{ url_for('static', filename='img/favicon.ico') }}"
+          rel="shortcut icon" type="image/x-icon" /> 
     <link rel="stylesheet" href="{{ url_for('static', filename = 'blog.css') }}">
-</head>
   </head>
   <body>
     <table id="wrapper">
-      <tr valign="top" height = 600px>
+      <tr valign="top" height = 500px>
         <td>
           <table id="nav">
             <tr>
@@ -25,21 +26,17 @@
           </table>
         </td>
         <td id="spacer"></td>
-        <td id=content width = 550px>
-          <table>
-            <tr>
-              <td>{% block content %}{% endblock %}</td>
-            </tr>
-            <tr id="footer">
-              <td>
-                <br>
-                <p>here's some links</p>
-                <br>
-              </td>
-            </tr>
-          </table>
+        <td id="content" width = 550px>
+          {% block content %}{% endblock %}
         </td>
       </tr>
+      <tr id="footer" height = 50px>
+        <td colspan="3" valign="middle">
+          <a href="http://github.com/ncmatson"><img src="{{ url_for('static', filename = 'img/GitHub-Mark.png')}}"></a>
+          <a href="mailto:cmatson@smu.edu"><img src="{{ url_for('static', filename = 'img/mail-128.png') }}"></a>
+        </td>
+      </tr>
+
     </table>
   </body>
 </html>
