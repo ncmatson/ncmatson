@@ -1,4 +1,4 @@
 flask/
 app/__pycache__
 *.pyc
-logs
+src
