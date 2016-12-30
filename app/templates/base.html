@@ -1,12 +1,14 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
     {% if title %}
     <title> {{ title }} </title>
     {% else %}
     <title>ncmatson</title>
     {% endif %}
     <link href="{{ url_for('static', filename='img/favicon.ico') }}"
-          rel="shortcut icon" type="image/x-icon" /> 
+          rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="{{ url_for('static', filename = 'blog.css') }}">
   </head>
   <body>
@@ -32,7 +34,7 @@
       </tr>
       <tr id="footer" height = 50px>
         <td colspan="3" valign="middle">
-          <a href="http://github.com/ncmatson"><img src="{{ url_for('static', filename = 'img/GitHub-Mark.png')}}"></a>
+          <a href="http://github.com/ncmatson" target=" "><img src="{{ url_for('static', filename = 'img/GitHub-Mark.png')}}"></a>
           <a href="mailto:cmatson@smu.edu"><img src="{{ url_for('static', filename = 'img/mail-128.png') }}"></a>
         </td>
       </tr>
