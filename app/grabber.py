@@ -22,14 +22,12 @@ class Grabber():
             self.form = 'jpg90'
 
     def grab(self, lat, lon, zoom, size='512x512'):
-        print('grabbing...')
         # name = str(lat) + '_' + str(lon)
         name = 'dg'+self.time
         loc = str(lon) + ',' + str(lat) + ',' + str(zoom)
 
         path = self.dest + '/' + name + self.ext
-        print('the path is '+path)
         url = 'https://api.mapbox.com/v4/'+self.map_id+'/'+loc+'/'+size+'.'+self.form+'?access_token='+self.token
         urllib.request.urlretrieve(url, path)
-        print('done grabing')
+
         return self.time
