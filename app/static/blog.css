@@ -7,6 +7,12 @@
   text-align: right;
 }
 
+#map {
+  height: 512px;
+  width: 512px;
+}
+
+
 a:active{
   color: red;
 }
