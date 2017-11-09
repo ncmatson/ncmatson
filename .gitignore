@@ -1,8 +1,5 @@
-flask/
-app/__pycache__
-*.pyc
-*.pem
-
+source/
+__pycache__
 
 
 # Elastic Beanstalk Files

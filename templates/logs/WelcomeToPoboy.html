@@ -1,0 +1,19 @@
+{% extends "log_base.html" %}
+{% block log %}
+
+<p>﻿11/8/2017 </p>
+<br>
+<p>Let me tell you about Poboy. </p>
+<br>
+<p>People say ideas are a dime a dozen. And they're right. I have ideas for things all the time. I'd like to write them down, and put them up here. That's why I have a 'Thoughts' tab. But I clearly haven't been doing that very frequently. 99% of the time I don't do a thing with any of the ideas that I have, but I'm trying to reduce that percentage. I'm trying to start that reduction with poboy. </p>
+<br>
+<p>The idea of Poboy originated in the fall of 2015 when I was doing my co-op with L3 (check out the LinkedIn or the resume in the 'Bio' for more info on that.) One day I was lying in bed about to go to bed, and I wanted to turn out the lights. I was only going to be in the apartment for a maximum of 6 months so in my frugality, and wanting to seem cool, I didn't get a bed frame for my mattress. As a result, I was very far away from the light switch. I thought, "man if only I could turn out the light with my phone." Of course, such things existed, but I didn't' want to pay $20.00 for a single light bulb. I also wanted to test my EE chops and see if could DIY it. But the problem was that I couldn't do anything with the electrical system in the apartment. What I needed was a poor-mans' smart home. </p>
+<br>
+<p>I sort of decided as a joke that the solution would be to make a box with a remote-control switch that would physically flip the switch on an off. I started to look into how I could make such a thing, and found the ESP8266 a dirt cheap wifi module. I figured I could hook one of those up to servo, stick'em in a box, and attach it to the wall right next to the switch and...VOILA! Light control in the palm of your hand. </p>
+<br>
+<p>The idea stewed in my mind for a while after that. That's another problem that I have, is that I tend to think to much in the planning stages of things. It's like the difference between waterfall and agile development. I am SUPER waterfall. The biggest issue that I kept getting hung up to in my mind was how would I talk to it? I didn't want to use Bluetooth because I wanted to control it from anywhere, but I couldn't get to the device behind my apartments router. At the time I knew nothing of web development, and very little of networking (I now know next to nothing of web development and just a little networking), and the whole idea fizzled before it ever got started. </p>
+<br>
+<p>Then this summer 2017 I decided I would make it happen. And now, in November of that same year, I'm proud to say that....it hasn't happened yet. BUT ITS CLOSER. I've made a little website on AWS, and I've got it set up so that you can in fact control a servo connected to the ESP8266 by clicking a button on the site. The hardware is a little buggy, it doesn't have portable power, and I still need to find a servo that can reliably flip a switch, design a case for the whole thing, and figure out a way to stick it on the wall, but I'm getting there. Which is good. It's good that I'm getting there. </p>
+<br>
+
+{% endblock %}
