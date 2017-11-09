@@ -1,5 +1,9 @@
 import os
-from flask import render_template, request
+from flask import Flask, render_template, request
+
+# Elastic Beanstalk initalization
+application = Flask(__name__)
+application.debug = True
 
 @application.route('/')
 @application.route('/index/')
@@ -17,7 +21,7 @@ def tim():
 
 @application.route('/thoughts/')
 def thoughts():
-    logs = os.listdir('app/templates/logs/')
+    logs = os.listdir('templates/logs/')
     return render_template('thoughts.html',
                                 title = 'Thoughts',
                                 logs = logs
@@ -29,3 +33,6 @@ def logs(log):
     return render_template('logs/'+log,
                             title = log_title
                             )
+
+if __name__ == '__main__':
+    application.run(host='0.0.0.0')
