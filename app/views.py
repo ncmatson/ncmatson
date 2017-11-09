@@ -1,22 +1,22 @@
 import os
-from app import app
+from app import application
 from flask import render_template, request
 
-@app.route('/')
-@app.route('/index/')
+@application.route('/')
+@application.route('/index/')
 def index():
     return render_template('index.html',
                             title = 'Home',
                             )
 
 
-@app.route('/bio/')
+@application.route('/bio/')
 def tim():
     return render_template('bio.html',
                             title = 'Bio'
                             )
 
-@app.route('/thoughts/')
+@application.route('/thoughts/')
 def thoughts():
     logs = os.listdir('app/templates/logs/')
     return render_template('thoughts.html',
@@ -24,7 +24,7 @@ def thoughts():
                                 logs = logs
                                 )
 
-@app.route('/thoughts/<log>')
+@application.route('/thoughts/<log>')
 def logs(log):
     log_title = log.replace('.html','')
     return render_template('logs/'+log,
